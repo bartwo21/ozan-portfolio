@@ -19,8 +19,8 @@ const syne = Syne({
 });
 
 export const metadata: Metadata = {
-	title: "Ozan Özdemir | 1st AC",
-	description: "Portfolio of Camera Assistant Ozan Özdemir",
+	title: "Ozan Özdemir | Cameraman",
+	description: "Portfolio of Cameraman Ozan Özdemir",
 };
 
 export default function RootLayout({

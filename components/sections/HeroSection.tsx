@@ -84,7 +84,7 @@ export default function HeroSection({ onLoaded }: HeroSectionProps) {
 				{/* Viewfinder UI Overlay */}
 				<div
 					ref={viewfinderRef}
-					className="absolute inset-0 z-20 pointer-events-none p-6 md:p-12 flex flex-col justify-between text-xs md:text-sm font-mono text-white/80 select-none mix-blend-difference"
+					className="absolute inset-0 z-20 pointer-events-none p-2 sm:p-4 md:p-12 flex flex-col justify-between text-[10px] sm:text-xs md:text-sm font-mono text-white/80 select-none mix-blend-difference overflow-hidden"
 				>
 					{/* Top Bar */}
 					<div className="flex justify-between items-start">
@@ -121,8 +121,8 @@ export default function HeroSection({ onLoaded }: HeroSectionProps) {
 					</div>
 
 					{/* Bottom Bar */}
-					<div className="flex justify-between items-end">
-						<div className="flex gap-8">
+					<div className="flex flex-wrap justify-between items-end gap-y-2">
+						<div className="flex gap-1.5 sm:gap-2 md:gap-8">
 							<div className="flex flex-col">
 								<span className="text-zinc-400 text-[10px] uppercase">ISO</span>
 								<span>800</span>
@@ -145,7 +145,7 @@ export default function HeroSection({ onLoaded }: HeroSectionProps) {
 							</div>
 						</div>
 
-						<div className="flex gap-4 items-center">
+						<div className="flex gap-2 sm:gap-4 items-center">
 							<div className="flex items-center gap-2 text-zinc-400">
 								<Film size={16} />
 								<span>A001_C024</span>
@@ -171,9 +171,9 @@ export default function HeroSection({ onLoaded }: HeroSectionProps) {
 						</h1>
 						<div className="mt-8 flex items-center justify-center gap-4 text-zinc-400 tracking-[0.3em] text-xs md:text-sm font-mono uppercase">
 							<Focus size={16} />
-							<span>1st AC</span>
+							<span>Cameraman</span>
 							<span className="text-zinc-600">/</span>
-							<span>Focus Puller</span>
+							<span>Cinematographer</span>
 						</div>
 					</div>
 				</div>

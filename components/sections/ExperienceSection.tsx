@@ -124,7 +124,7 @@ export default function ExperienceSection() {
 				<div className="mb-24 flex flex-col md:flex-row items-center md:items-end gap-6 md:gap-12">
 					{/* Header - Custom Animation */}
 					<div ref={titleRef}>
-						<h2 className="font-syne font-bold text-6xl md:text-9xl uppercase leading-[0.8] text-white tracking-tighter">
+						<h2 className="font-syne font-bold text-5xl md:text-9xl uppercase leading-[0.8] text-white tracking-tighter">
 							<span className="animate-title inline-block">The</span> <br />
 							<span className="animate-title inline-block text-zinc-700">
 								Cut
@@ -148,6 +148,7 @@ export default function ExperienceSection() {
 							</h4>
 							<p className="text-sm text-zinc-200">Camera Assistant</p>
 							<p className="text-sm text-zinc-200">Visual Storyteller</p>
+							<p className="text-sm text-zinc-200">Light Technician</p>
 						</div>
 						<div className="space-y-2">
 							<h4 className="text-xs font-mono text-zinc-400 uppercase tracking-wider">
@@ -162,7 +163,7 @@ export default function ExperienceSection() {
 							baseOpacity={0}
 							enableBlur={true}
 							stagger={0.01}
-							textClassName="text-xl md:text-3xl font-light text-zinc-300"
+							textClassName="text-lg md:text-2xl font-light text-zinc-300"
 						>
 							My passion for storytelling led me to Düzce University's Cinema
 							Department, where I honed my skills in camera operation, lighting,
@@ -175,7 +176,7 @@ export default function ExperienceSection() {
 							baseOpacity={0}
 							enableBlur={true}
 							stagger={0.01}
-							textClassName="text-2xl md:text-5xl font-light leading-tight text-white"
+							textClassName="text-xl md:text-4xl font-light leading-tight text-white"
 						>
 							Professionally, I've served as a camera assistant on documentaries
 							for Diyanet TV and various music videos. These experiences taught
@@ -187,7 +188,7 @@ export default function ExperienceSection() {
 							baseOpacity={0}
 							enableBlur={true}
 							stagger={0.01}
-							textClassName="text-2xl md:text-5xl font-light leading-tight text-white"
+							textClassName="text-xl md:text-4xl font-light leading-tight text-white"
 							className="pb-8 border-b border-zinc-700"
 						>
 							I combine technical precision with a creative eye, managing

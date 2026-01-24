@@ -28,8 +28,7 @@ export default function AboutSection() {
 						</h2>
 						<div className="space-y-6 text-lg text-zinc-400 font-light leading-relaxed max-w-lg">
 							<p>
-								I am Ozan Özdemir, a tailored 1st Assistant Camera and Focus
-								Puller based in Istanbul. With years of experience on feature
+								I am Ozan Özdemir, a tailored 1st Assistant Camera based in Ankara. With years of experience on feature
 								films, commercials, and high-end music videos, I bring
 								precision, technical reliability, and a calm demeanor to every
 								set.
@@ -49,7 +48,7 @@ export default function AboutSection() {
 						</h3>
 						<ul className="space-y-4">
 							{/* Fallback if gear is empty/undefined */}
-							{(gear || ["Arri Alexa 35", "Sony Venice 2", "Red V-Raptor"]).map(
+							{(gear).map(
 								(item, i) => (
 									<li
 										key={i}

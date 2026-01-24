@@ -50,29 +50,18 @@ export default function ContactSection() {
 				{/* Main Action */}
 				<div className="flex flex-col gap-8">
 					<a
-						href="mailto:ozan@ozanozdemir.com"
+						href="mailto:ozan.ozdemir.5137@gmail.com"
 						className="group flex items-center justify-between border-b border-zinc-700 pb-4 hover:border-white transition-colors duration-500"
 					>
-						<span className="font-syne text-4xl md:text-7xl font-bold text-white group-hover:pl-4 transition-all duration-500">
-							ozan@ozanozdemir.com
+						<span className="font-syne text-sm md:text-4xl font-bold text-white group-hover:pl-4 transition-all duration-500">
+							ozan.ozdemir.5137@gmail.com
 						</span>
 						<ArrowUpRight className="w-8 h-8 md:w-16 md:h-16 text-zinc-500 group-hover:text-white group-hover:rotate-45 transition-all duration-500" />
 					</a>
 				</div>
 
 				{/* Footer Info */}
-				<div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8">
-					<div className="space-y-4">
-						<h3 className="text-zinc-500 font-mono text-xs uppercase tracking-widest">
-							Socials
-						</h3>
-						<div className="flex flex-col gap-2">
-							<SocialLink href="#" label="Instagram" />
-							<SocialLink href="#" label="LinkedIn" />
-							<SocialLink href="#" label="IMDb" />
-						</div>
-					</div>
-
+				<div className="flex justify-between items-center mx-4">
 					<div className="space-y-4">
 						<h3 className="text-zinc-500 font-mono text-xs uppercase tracking-widest">
 							Location
@@ -94,19 +83,5 @@ export default function ContactSection() {
 				</div>
 			</div>
 		</section>
-	);
-}
-
-function SocialLink({ href, label }: { href: string; label: string }) {
-	return (
-		<a
-			href={href}
-			target="_blank"
-			rel="noopener noreferrer"
-			className="text-white hover:text-zinc-400 transition-colors duration-300 text-sm flex items-center gap-2 group"
-		>
-			{label}
-			<span className="w-0 h-px bg-current transition-all duration-300 group-hover:w-4" />
-		</a>
 	);
 }
