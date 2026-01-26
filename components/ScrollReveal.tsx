@@ -42,7 +42,17 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
 	const containerRef = useRef<HTMLHeadingElement>(null);
 
 	const splitText = useMemo(() => {
-		const text = typeof children === "string" ? children : "";
+		let text = "";
+		if (typeof children === "string") {
+			text = children;
+		} else if (Array.isArray(children)) {
+			text = children
+				.map((child) => (typeof child === "string" ? child : ""))
+				.join("");
+		}
+
+		if (!text) return null;
+
 		return text.split(/(\s+)/).map((word, index) => {
 			if (word.match(/^\s+$/)) return word;
 			return (

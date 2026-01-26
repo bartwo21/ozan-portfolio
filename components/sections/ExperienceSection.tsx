@@ -135,7 +135,7 @@ export default function ExperienceSection() {
 					<div className="h-px w-24 md:w-64 bg-zinc-700 mb-6 hidden md:block" />
 
 					<div className="md:mb-4 text-xs font-mono text-zinc-500 uppercase tracking-widest">
-						[ Scene: 01 — Journey ]
+						[ Scene: 01 &mdash; Journey ]
 					</div>
 				</div>
 
@@ -165,7 +165,7 @@ export default function ExperienceSection() {
 							stagger={0.01}
 							textClassName="text-lg md:text-2xl font-light text-zinc-300"
 						>
-							My passion for storytelling led me to Düzce University's Cinema
+							My passion for storytelling led me to Düzce University&apos;s Cinema
 							Department, where I honed my skills in camera operation, lighting,
 							and narrative layout.
 						</ScrollReveal>
@@ -178,7 +178,7 @@ export default function ExperienceSection() {
 							stagger={0.01}
 							textClassName="text-xl md:text-4xl font-light leading-tight text-white"
 						>
-							Professionally, I've served as a camera assistant on documentaries
+							Professionally, I&apos;ve served as a camera assistant on documentaries
 							for Diyanet TV and various music videos. These experiences taught
 							me to balance the rigid discipline of broadcast standards with the
 							dynamic energy required for creative productions.
