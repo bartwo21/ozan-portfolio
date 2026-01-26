@@ -33,7 +33,9 @@ export default function RootLayout({
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} ${syne.variable} antialiased`}
 			>
-				<SmoothScrollProvider>{children}</SmoothScrollProvider>
+				<SmoothScrollProvider>
+					{children}
+				</SmoothScrollProvider>
 			</body>
 		</html>
 	);

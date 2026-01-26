@@ -162,10 +162,10 @@ export default function ExperienceSection() {
 						<ScrollReveal
 							baseOpacity={0}
 							enableBlur={true}
-							stagger={0.01}
-							textClassName="text-lg md:text-2xl font-light text-zinc-300"
+							stagger={0.05}
+							textClassName="text-xl md:text-3xl font-light leading-tight text-white"
 						>
-							My passion for storytelling led me to Düzce University&apos;s Cinema
+							My passion for storytelling led me to Duzce University&apos;s Cinema
 							Department, where I honed my skills in camera operation, lighting,
 							and narrative layout.
 						</ScrollReveal>
@@ -175,22 +175,13 @@ export default function ExperienceSection() {
 						<ScrollReveal
 							baseOpacity={0}
 							enableBlur={true}
-							stagger={0.01}
+							stagger={0.05}
 							textClassName="text-xl md:text-4xl font-light leading-tight text-white"
 						>
 							Professionally, I&apos;ve served as a camera assistant on documentaries
 							for Diyanet TV and various music videos. These experiences taught
 							me to balance the rigid discipline of broadcast standards with the
 							dynamic energy required for creative productions.
-						</ScrollReveal>
-
-						<ScrollReveal
-							baseOpacity={0}
-							enableBlur={true}
-							stagger={0.01}
-							textClassName="text-xl md:text-4xl font-light leading-tight text-white"
-							className="pb-8 border-b border-zinc-700"
-						>
 							I combine technical precision with a creative eye, managing
 							equipment and focus with reliability. My goal is to handle the
 							technical load so the DP can focus purely on the art.

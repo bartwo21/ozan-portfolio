@@ -100,6 +100,7 @@ export default function DarkVeil({
 		const renderer = new Renderer({
 			dpr: Math.min(window.devicePixelRatio, 2),
 			canvas,
+			alpha: true, // Optimisation: allow transparency if needed
 		});
 
 		const gl = renderer.gl;
@@ -132,9 +133,12 @@ export default function DarkVeil({
 		resize();
 
 		const start = performance.now();
-		let frame = 0;
+		let frameId: number;
+		let isVisible = true;
 
 		const loop = () => {
+			if (!isVisible) return; // Stop rendering if not visible
+
 			program.uniforms.uTime.value =
 				((performance.now() - start) / 1000) * speed;
 			program.uniforms.uHueShift.value = hueShift;
@@ -143,14 +147,41 @@ export default function DarkVeil({
 			program.uniforms.uScanFreq.value = scanlineFrequency;
 			program.uniforms.uWarp.value = warpAmount;
 			renderer.render({ scene: mesh });
-			frame = requestAnimationFrame(loop);
+			frameId = requestAnimationFrame(loop);
 		};
 
+		// Intersection Observer to pause animation when off-screen
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				const wasVisible = isVisible;
+				isVisible = entry.isIntersecting;
+
+				if (isVisible && !wasVisible) {
+					// Resume loop if it became visible and wasn't running
+					loop();
+				} else if (!isVisible && wasVisible) {
+					// Stop loop if it became hidden
+					cancelAnimationFrame(frameId);
+				}
+			},
+			{ threshold: 0 },
+		);
+
+		if (parent) {
+			observer.observe(parent);
+		}
+
+		// Initial start
 		loop();
 
 		return () => {
-			cancelAnimationFrame(frame);
+			cancelAnimationFrame(frameId);
 			window.removeEventListener("resize", resize);
+			observer.disconnect();
+
+			// Clean up WebGL context
+			const gl = renderer.gl;
+			gl.getExtension('WEBGL_lose_context')?.loseContext();
 		};
 	}, [
 		hueShift,

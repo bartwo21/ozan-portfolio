@@ -13,22 +13,22 @@ const works = [
 		id: 1,
 		title: "UR",
 		role: "Camera / Editing",
-		img: "/images/image1.png",
+		img: "/images/image1.webp",
 		url: ''
 	},
 	{
 		id: 2,
 		title: "It's Like I Know You",
 		role: "Sound",
-		img: "/images/image2.png",
+		img: "/images/image2.webp",
 		url: 'https://www.youtube.com/watch?v=KkaapW-j7wo'
 	},
-	{ id: 3, title: "Bir Omurluk Seyahat: Evliya Celebi", role: "Camera Assistant", img: "/images/image3.png", url: 'https://www.youtube.com/watch?v=Hca8aWCkcEo' },
-	{ id: 4, title: "Commercial Project", role: "Camera / Editing", img: "/images/image4.png", url: '' },
-	{ id: 5, title: "Duzce University Mekatek Student Club Introduction", role: "Camera / Editing", img: "/images/image5.png", url: '' },
-	{ id: 6, title: "Duzce University American Football Team Introduction", role: "Camera / Editing", img: "/images/image6.png", url: '' },
-	{ id: 7, title: "Duzce Doner Alti Advertisement", role: "Camera / Editing", img: "/images/image7.png", url: '' },
-	{ id: 8, title: "Sevdanin Rengi Music Video", role: "Camera Assistant", img: "/images/image8.png", url: 'https://www.youtube.com/watch?v=vXHBRJ_tJYs' },
+	{ id: 3, title: "Bir Omurluk Seyahat: Evliya Celebi", role: "Camera Assistant", img: "/images/image3.webp", url: 'https://www.youtube.com/watch?v=Hca8aWCkcEo' },
+	{ id: 4, title: "Commercial Project", role: "Camera / Editing", img: "/images/image4.webp", url: '' },
+	{ id: 5, title: "Duzce University Mekatek Student Club Introduction", role: "Camera / Editing", img: "/images/image5.webp", url: '' },
+	{ id: 6, title: "Duzce University American Football Team Introduction", role: "Camera / Editing", img: "/images/image6.webp", url: '' },
+	{ id: 7, title: "Duzce Doner Alti Advertisement", role: "Camera / Editing", img: "/images/image7.webp", url: '' },
+	{ id: 8, title: "Sevdanin Rengi Music Video", role: "Camera Assistant", img: "/images/image8.webp", url: 'https://www.youtube.com/watch?v=vXHBRJ_tJYs' },
 ];
 
 export default function WorksSection() {
@@ -87,7 +87,7 @@ export default function WorksSection() {
 					{works.map((work) => (
 						<div
 							key={work.id}
-							className="relative flex h-screen w-[85vw] md:w-[55vw] shrink-0 flex-col justify-center px-4 md:px-10 group"
+							className="relative flex h-screen w-[85vw] md:w-[38vw] shrink-0 flex-col justify-center px-4 md:px-10 group"
 						>
 							<div className="relative aspect-[9/16] md:aspect-[4/5] w-full overflow-hidden bg-zinc-900 transition-all duration-500 group-hover:scale-95 grayscale hover:grayscale-0">
 								<Image
